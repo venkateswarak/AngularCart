@@ -1,0 +1,296 @@
+[
+	{
+		"sku": "APL",
+		"name": "Apple",
+		"description": "Eat one every day to keep the doctor away!",
+		"price": 12,
+		"cal": 90,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 2,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "AVC",
+		"name": "Avocado",
+		"description": "Guacamole anyone?",
+		"price": 16,
+		"cal": 90,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 1,
+			"Folates": 1,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "BAN",
+		"name": "Banana",
+		"description": "These are rich in Potassium and easy to peel.",
+		"price": 4,
+		"cal": 120,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 2,
+			"Folates": 1,
+			"Potassium": 2,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "CTP",
+		"name": "Cantaloupe",
+		"description": "Delicious and refreshing.",
+		"price": 3,
+		"cal": 50,
+		"nutrients": {
+			"Carotenoid": 4,
+			"Vitamin C": 4,
+			"Folates": 1,
+			"Potassium": 2,
+			"Fiber": 0
+		}
+	},
+	{
+		"sku": "FIG",
+		"name": "Fig",
+		"description": "OK, not that nutritious, but sooo good!",
+		"price": 10,
+		"cal": 100,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 0,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "GRF",
+		"name": "Grapefruit",
+		"description": "Pink or red, always healthy and delicious.",
+		"price": 11,
+		"cal": 50,
+		"nutrients": {
+			"Carotenoid": 4,
+			"Vitamin C": 4,
+			"Folates": 1,
+			"Potassium": 1,
+			"Fiber": 1
+		}
+	},
+	{
+		"sku": "GRP",
+		"name": "Grape",
+		"description": "Wine is great, but grapes are even better.",
+		"price": 8,
+		"cal": 100,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 3,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 1
+		}
+	},
+	{
+		"sku": "GUA",
+		"name": "Guava",
+		"description": "Exotic, fragrant, tasty!",
+		"price": 8,
+		"cal": 50,
+		"nutrients": {
+			"Carotenoid": 4,
+			"Vitamin C": 4,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "KIW",
+		"name": "Kiwi",
+		"description": "These come from New Zealand.",
+		"price": 14,
+		"cal": 90,
+		"nutrients": {
+			"Carotenoid": 1,
+			"Vitamin C": 4,
+			"Folates": 0,
+			"Potassium": 2,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "LYC",
+		"name": "Lychee",
+		"description": "Unusual and highly addictive!",
+		"price": 18,
+		"cal": 125,
+		"nutrients": {
+			"Carotenoid": 1,
+			"Vitamin C": 4,
+			"Folates": 0,
+			"Potassium": 2,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "MAN",
+		"name": "Mango",
+		"description": "Messy to eat, but well worth it.",
+		"price": 8,
+		"cal": 70,
+		"nutrients": {
+			"Carotenoid": 3,
+			"Vitamin C": 4,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 1
+		}
+	},
+	{
+		"sku": "ORG",
+		"name": "Orange",
+		"description": "Vitamin C anyone? Go ahead, make some juice.",
+		"price": 9,
+		"cal": 70,
+		"nutrients": {
+			"Carotenoid": 1,
+			"Vitamin C": 4,
+			"Folates": 2,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "PAP",
+		"name": "Papaya",
+		"description": "Super-popular for breakfast.",
+		"price": 5,
+		"cal": 60,
+		"nutrients": {
+			"Carotenoid": 3,
+			"Vitamin C": 4,
+			"Folates": 2,
+			"Potassium": 2,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "PCH",
+		"name": "Peach",
+		"description": "Add some cream and enjoy.",
+		"price": 19,
+		"cal": 70,
+		"nutrients": {
+			"Carotenoid": 1,
+			"Vitamin C": 2,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "PER",
+		"name": "Pear",
+		"description": "Delicious fresh, or cooked in red wine, or distilled.",
+		"price": 8,
+		"cal": 100,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 2,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "PMG",
+		"name": "Pomegranate",
+		"description": "Delicious, healthy, beautiful, and sophisticated!",
+		"price": 19,
+		"cal": 110,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 2,
+			"Folates": 0,
+			"Potassium": 2,
+			"Fiber": 0
+		}
+	},
+	{
+		"sku": "PNP",
+		"name": "Pineapple",
+		"description": "Enjoy it (but don't forget to peel first).",
+		"price": 4,
+		"cal": 60,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 3,
+			"Folates": 0,
+			"Potassium": 0,
+			"Fiber": 1
+		}
+	},
+	{
+		"sku": "PSM",
+		"name": "Persimmon",
+		"description": "Believe it or not, they are berries!",
+		"price": 6,
+		"cal": 120,
+		"nutrients": {
+			"Carotenoid": 4,
+			"Vitamin C": 3,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 3
+		}
+	},
+	{
+		"sku": "STR",
+		"name": "Strawberry",
+		"description": "Beautiful, healthy, and delicious.",
+		"price": 7,
+		"cal": 40,
+		"nutrients": {
+			"Carotenoid": 0,
+			"Vitamin C": 4,
+			"Folates": 1,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "TNG",
+		"name": "Tangerine",
+		"description": "Easier to peel than oranges!",
+		"price": 8,
+		"cal": 50,
+		"nutrients": {
+			"Carotenoid": 3,
+			"Vitamin C": 4,
+			"Folates": 1,
+			"Potassium": 1,
+			"Fiber": 2
+		}
+	},
+	{
+		"sku": "WML",
+		"name": "Watermelon",
+		"description": "Nothing comes close on those hot summer days.",
+		"price": 4,
+		"cal": 90,
+		"nutrients": {
+			"Carotenoid": 4,
+			"Vitamin C": 4,
+			"Folates": 0,
+			"Potassium": 1,
+			"Fiber": 1
+		}
+	}
+]

@@ -1,0 +1,72 @@
+<p class="text-info">
+  Thanks for shopping at the Angular 6 Fruit Store.<br />
+  This is your shopping cart. Here you can edit the items, 
+  go back to the store, clear the cart, or check out.
+</p>
+<div class="row">
+  <div class="col-md-8">
+      <!-- items -->
+      <table class="table table-bordered">
+          <!-- header -->
+          <tr class="well">
+              <td><b>Item</b></td>
+              <td class="text-center"><b>Quantity</b></td>
+              <td class="text-right"><b>Price</b></td>
+              <td></td>
+          </tr>
+          <!-- empty cart message -->
+          <tr [ngStyle]="{display:pdtSvc.getTotalCount() > 0?'none':''}">
+              <td class="text-center" colspan="4">
+                  Your cart is empty.
+              </td>
+          </tr>
+          <!-- cart items -->
+          <tr *ngFor="let item of pdtSvc.cartItems">
+              <td>{{item.name}}</td>
+              <td class="text-center">
+                {{item.quantity}}
+              </td>
+              <td class="text-right">{{item.price * item.quantity | currency:'USD':true}}</td>
+              <td class="text-center" title="remove from cart">
+                  <a (click)="pdtSvc.clearCartItem(item.sku)" >
+                      <i class="glyphicon glyphicon-remove"></i>
+                  </a>
+              </td>
+          </tr>
+          <!-- footer -->
+          <tr class="well">
+              <td><b>Total</b></td>
+              <td class="text-center"><b>{{pdtSvc.getTotalCount()}} items</b></td>
+              <td class="text-right"><b>{{pdtSvc.getTotalPrice() | currency:'USD':true}}</b></td>
+              <td></td>
+          </tr>
+      </table>
+  </div>
+  <div class="col-md-4">
+      <button 
+          class="btn btn-block" 
+          (click)="backToStore()">
+          <i class="glyphicon glyphicon-chevron-left"></i> back to store
+      </button>
+      <button 
+          class="btn btn-block btn-danger" 
+          (click)="pdtSvc.clearCartItem()" 
+          [disabled]="pdtSvc.getTotalCount() < 1" >
+          <i class="glyphicon glyphicon-trash icon-white"></i> clear cart
+      </button>
+      <br /><br />
+      <button
+          class="btn btn-block btn-primary"
+          (click)="checkout('PayPal')"
+          [disabled]="pdtSvc.getTotalCount() < 1">
+          <i class="glyphicon glyphicon-ok"></i> check out using PayPal
+      </button>
+      <br /><br />
+      <button 
+          class="btn btn-block btn-link"
+          (click)="checkout('PayPal')"
+          [disabled]="pdtSvc.getTotalCount() < 1" >
+          <img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="checkout PayPal"/>
+      </button>
+  </div>
+</div>

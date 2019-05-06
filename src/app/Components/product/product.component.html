@@ -1,0 +1,64 @@
+<p class="text-info">
+    <img src="assets/resources/{{product.sku}}.jpg" alt="{{product.name}}"/>
+    {{product.name}}: {{product.description}}<br />
+<div class="row">
+    <div class="col-md-8">
+
+        <!-- product info -->
+        <table class="table table-bordered">
+
+            <!-- cart summary at the top -->
+            <tr class="well">
+                <td class="tdRight" colspan="3">
+                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                    <a routerLink="/cart" title="go to shopping cart">
+                        <b>{{pdtSvc.getTotalCount()}}</b> items, <b>{{pdtSvc.getTotalPrice() | currency:'USD':true}}</b>
+                    </a>
+                </td>
+            </tr>
+
+            <!-- product calories -->
+            <tr>
+                <td class="tdRight"><b>Calories</b></td>
+                <td class="tdCenter">
+                    <h2>{{product.cal}}</h2>
+                </td>
+            </tr>
+
+            <!-- product nutrients -->
+            <tr *ngFor="let nutrientName of product.nutrients">
+                <td class="tdRight"><b>{{nutrientName}}</b></td>
+                <td class="tdCenter"><img src="assets/r{{nutrientValue}}.png" alt="{{nutrientValue}}" /></td>
+                <td>
+                    <b>{{getDvaCaption(pdtSvc.products.currentItem.nutrients[key])}}</b>:
+                    {{getDvaRange(pdtSvc.products.currentItem.nutrients[key])}} of the recommended daily value.
+                </td>
+            </tr>
+
+            <!-- cart summary at the bottom -->
+            <tr class="well">
+                <td class="text-right" colspan="2">
+                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                    <a routerLink="/cart" title="go to shopping cart">
+                        <b>{{pdtSvc.getTotalCount()}}</b> items, <b>{{pdtSvc.getTotalPrice() | currency:'USD':true}}</b>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-block btn-primary" 
+            (click)="pdtSvc.addCartItem(pdtSvc.products.currentItem, 1)">
+            <i class="glyphicon glyphicon-shopping-cart"></i> add to cart
+        </button>
+        <button class="btn btn-block btn-danger"
+            (click)="pdtSvc.clearCartItem(pdtSvc.products.currentItem.sku)"
+            [disabled]="pdtSvc.getTotalCount(pdtSvc.products.currentItem.sku) < 1">
+            <i class="glyphicon glyphicon-trash"></i> remove from cart
+        </button>
+        <button class="btn btn-block" 
+            (click)="backToStore()">
+            <i class="glyphicon glyphicon-chevron-left"></i> back to store
+        </button>
+    </div>
+</div>

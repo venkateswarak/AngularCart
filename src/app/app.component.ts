@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { ProductsService } from './services/ProductService';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ven-cart-app';
+  private _pdtSvc: ProductsService;
+
+  constructor( @Inject(ProductsService) pdtSvc: ProductsService) {
+      this._pdtSvc = pdtSvc;
+  }
 }
