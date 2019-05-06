@@ -9,7 +9,7 @@ import { ProductsService } from './services/ProductService';
 export class AppComponent {
   private _pdtSvc: ProductsService;
 
-  constructor( @Inject(ProductsService) pdtSvc: ProductsService) {
+  constructor( pdtSvc: ProductsService) {
       this._pdtSvc = pdtSvc;
   }
 }
