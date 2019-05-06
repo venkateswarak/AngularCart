@@ -15,11 +15,6 @@ export class StoreComponent implements OnInit {
   pdtSvc: ProductsService;
     
   products: Observable<any>;
-<<<<<<< HEAD
-=======
-
-    
->>>>>>> origin/master
     private _router: Router;
 
     constructor( pdtSvc: ProductsService, router: Router) {
@@ -34,19 +29,11 @@ export class StoreComponent implements OnInit {
     })
     }
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/master
     private moveCurrentTo(product){
         let navigationExtras: NavigationExtras = {
             queryParams: product
         };
         this._router.navigate(['/product'], navigationExtras);
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 
 }
