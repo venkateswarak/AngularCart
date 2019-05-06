@@ -15,10 +15,8 @@ export class StoreComponent implements OnInit {
   pdtSvc: ProductsService;
     
   products: Observable<any>;
-    toFilter: any;
 
-    private _filter: string;
-    private _filterFunction: any;
+    
     private _router: Router;
 
     constructor( pdtSvc: ProductsService, router: Router) {
@@ -35,43 +33,12 @@ export class StoreComponent implements OnInit {
     })
     }
 
-    get filter(): string {
-        return this._filter;
-    }
-    set filter(value: string) {
-        this._filter = value;
-        if (this.toFilter) {
-            clearTimeout(this.toFilter);
-        }
-        this.toFilter = setTimeout(() => {
-            this.toFilter = null;
-            var cv = this.products;
-            // if (cv) {
-            //     if (cv.filter != this._filterFunction) {
-            //         cv.filter = this._filterFunction;
-            //     } 
-            // }
-        }, 500);
-    }
+    
     private moveCurrentTo(product){
         let navigationExtras: NavigationExtras = {
             queryParams: product
         };
         this._router.navigate(['/product'], navigationExtras);
     }
-    // define filter function for collectionview
-    private filterFunction(item) {
-        var filter = this._filter;
-
-        if (filter && item) {
-            var value = item['name'];
-            if (value.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
-                return true;
-            }
-            return false;
-        }
-
-        return true;
-    };
 
 }
