@@ -1,5 +1,6 @@
 {
-  "extends": "tslint:recommended",
+  "extends": [
+    "rxjs-tslint-rules" ],
   "rulesDirectory": [
     "codelyzer"
   ],
@@ -60,6 +61,8 @@
       true,
       "single"
     ],
+    "rxjs-add": { "severity": "error" },
+    "rxjs-no-unused-add": { "severity": "error" },
     "trailing-comma": false,
     "no-output-on-prefix": true,
     "use-input-property-decorator": true,

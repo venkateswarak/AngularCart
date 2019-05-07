@@ -28,7 +28,7 @@
 	<tr *ngFor="let product of products | filterPipe: searchText ">
 		<td class="text-center"><img src="assets/resources/{{product.sku}}.jpg" alt="{{product.name}}" /></td>
 		<td>
-			<a (click)='moveCurrentTo(product)'><b>{{product.name}}</b></a><br />
+			<a routerLink="/product" (click)='moveCurrentTo(product)'><b>{{product.name}}</b></a><br />
 			{{product.description}}
 		</td>
 		<td class="text-right">

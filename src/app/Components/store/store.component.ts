@@ -13,27 +13,26 @@ import { FilterPipePipe } from './filter-pipe.pipe';
 export class StoreComponent implements OnInit {
 
   pdtSvc: ProductsService;
-    
+
   products: Observable<any>;
-    private _router: Router;
+    private router: Router;
 
     constructor( pdtSvc: ProductsService, router: Router) {
-        this._router = router;
+        this.router = router;
         this.pdtSvc = pdtSvc;
     }
 
-    
+
     ngOnInit(): void {
       this.pdtSvc.getProducts().subscribe( data => {
         this.products = data;
-    })
+    });
     }
 
-    private moveCurrentTo(product){
-        let navigationExtras: NavigationExtras = {
-            queryParams: product
-        };
-        this._router.navigate(['/product'], navigationExtras);
+    private moveCurrentTo(product) {
+      if (localStorage != null && JSON != null) {
+        localStorage['product'] = JSON.stringify(product);
+    }
     }
 
 }

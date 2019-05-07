@@ -9,7 +9,6 @@ import {map} from 'rxjs/operators';
 @Injectable()
 export class ProductsService {
     cartItems: any[];
-    product: any[];
     http: HttpClient;
     clearCart = false;
     constructor( @Inject(HttpClient) http: HttpClient) {
@@ -38,9 +37,8 @@ export class ProductsService {
         }
         return total;
     }
-    getProduct(){
-        return this.product;
-    }
+
+
     getTotalCount(sku) {
         var count = 0;
         for (var i = 0; i < this.cartItems.length; i++) {

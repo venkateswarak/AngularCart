@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/ProductService';
 import { CheckoutService } from 'src/app/services/CheckoutService';
 
@@ -48,3 +48,4 @@ export class CartComponent implements OnInit {
   }
 
 }
+
