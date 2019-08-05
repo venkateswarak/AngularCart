@@ -1,17 +1,19 @@
 'use strict';
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import {Observable,of, from } from 'rxjs';
 import {map} from 'rxjs/operators';
 
-
+export interface cartItemsInterface  {
+    sku: string, name: string, price: number, quantity: number
+}
 // Common data service
 @Injectable()
 export class ProductsService {
-    cartItems: any[];
+    cartItems : cartItemsInterface[];
     http: HttpClient;
     clearCart = false;
-    constructor( @Inject(HttpClient) http: HttpClient) {
+    constructor( http: HttpClient) {
         this.http = http;
         this.cartItems = [];
         this.loadCartItems();
@@ -52,7 +54,7 @@ export class ProductsService {
 
     // add item in shopping cart
     addCartItem(product: any, quantity: number) {
-        quantity = this.toNumber(quantity);
+        
         if (quantity != 0) {
 
             // update quantity for existing item
@@ -61,7 +63,7 @@ export class ProductsService {
                 var item = this.cartItems[i];
                 if (item.sku === product.sku) {
                     found = true;
-                    item.quantity = this.toNumber(item.quantity + quantity);
+                    item.quantity = item.quantity + quantity;
                 }
             }
 
